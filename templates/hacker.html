@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang = "en">
+  <head>
+    <title>formDemo.html</title>
+    <meta charset = "UTF-8" />
+  </head>
+  <body>
+    <form action = "/login" method = "POST">
+        <h1>Login</h1>
+        <fieldset>
+        <legend>Name</legend>
+        <p>
+          <label>First Name</label>
+          <input type = "text"
+                 name = "firstName"
+                 placeholder = "First Name"><br>
+        </p>
+        <p>
+          <label>Last Name</label>
+          <input type = "text"
+                  name = "lastName"
+                  placeholder = "Last Name"><br>
+        </p>
+      </fieldset>
+            <fieldset>
+              <legend>Information</legend>
+              <p>
+                <label>Email</label>
+                <input type = "text"
+                       name = "email"
+                       placeholder = "example@domain.com"><br>
+              </p>
+              <p>
+                <label>Phone Number</label>
+                <input type = "text"
+                        name = "phoneNumber"
+                        placeholder = "(626)555-1234"><br>
+              </p>
+            </fieldset>
+                <fieldset>
+                  <legend>Password</legend>
+                  <p>
+                    <label>Password</label>
+                    <input type = "text"
+                           name = "password"
+                           placeholder = "********"><br>
+                  </p>
+                </fieldset>
+            <input type = "submit" value = "Submit">
+    </form>
+  </body>
+</html>

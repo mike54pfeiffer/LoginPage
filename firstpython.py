@@ -27,5 +27,9 @@ def login():
             mail = request.form['email']
             pNumber = request.form['phoneNumber']
             pw = request.form['password']
+            print("user logged in with: " + fName + " " + lName + " " + mail)
+            print("phone number: " + pNumber + "pword " + pw)
+            return render_template("login.html", firstName = fName, lastName = lName, 
+            email = mail, phoneNumber = pNumber, password = pw)
 if __name__ == "__main__":
     app.run(debug=True)

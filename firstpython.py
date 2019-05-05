@@ -16,12 +16,12 @@ def index():
 def hello():
     return render_template("hello.html")
 
-@app.route("/hacker")
-def hacker():
-    return render_template("hacker.html")
-
-@app.route("/login", methods = ['POST'])
+@app.route("/login")
 def login():
+    return render_template("login.html")
+
+@app.route("/loginSuccess", methods = ['POST'])
+def loginSuccess():
             fName = request.form['firstName']
             lName = request.form['lastName']
             mail = request.form['email']
@@ -30,7 +30,7 @@ def login():
             print("User logged in with: " + fName + " " + lName + " | " + mail)
             print("Phone number: " + pNumber)
             print("Password: " + pw)
-            return render_template("login.html", firstName = fName, lastName = lName, 
+            return render_template("loginSuccess.html", firstName = fName, lastName = lName, 
             email = mail, phoneNumber = pNumber, password = pw)
 if __name__ == "__main__":
     app.run(debug=True)

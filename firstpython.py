@@ -17,15 +17,9 @@ def login():
 
 @app.route("/loginSuccess", methods = ['POST'])
 def loginSuccess():
-            fName = request.form['firstName']
-            lName = request.form['lastName']
             mail = request.form['email']
-            pNumber = request.form['phoneNumber']
-            pw = request.form['password']
-            print("User logged in with: " + fName + " " + lName + " | " + mail)
-            print("Phone number: " + pNumber)
-            print("Password: " + pw)
-            return render_template("loginSuccess.html", firstName = fName, lastName = lName, 
-            email = mail, phoneNumber = pNumber, password = pw)
+            pword = request.form['password']
+            print("User logged in with: " + mail + " | " + pword)
+            return render_template("loginSuccess.html", email = mail, password = pword)
 if __name__ == "__main__":
     app.run(debug=True)

@@ -3,14 +3,14 @@
     <head>
         <meta charset = "UTF-8">
         <title>User Login</title>
-        <link href = "{{ url_for('static', filename='styleSheet/style.css') }}">
+        <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static', filename='styleSheets/loginStyle.css') }}">
     </head>
     <body>
-        <form class = "box" action = "index.html" method="post">
+        <form class = "box" action = "/loginSuccess" method="post">
             <h1>Login</h1>
-            <input type = "text" name = "" placeholder = "Username">
-            <input type = "password" name = "" placeholder = "Password">
-            <input type = "submit" name = "" value = "Login">
+            <input type = "text" name = "email" placeholder = "example@domain.com">
+            <input type = "password" name = "password" placeholder = "Password">
+            <input type = "submit" name = "" value = "Login" a href = "loginSuccess.html">
         </form>
     </body>
 </html>
